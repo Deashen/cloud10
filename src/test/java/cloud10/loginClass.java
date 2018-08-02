@@ -27,6 +27,7 @@ public class loginClass
         String bodyText = driver.findElement(this.bodyTextLocator).getText();
         Assert.assertTrue("Text not found!", bodyText.contains(this.cloud9WelcomeHeader));
         Thread.sleep(2000L);
+        System.out.println("Click on Homepage");
         driver.findElement(By.xpath("/html/body/center[3]/a")).click();
     }
 }

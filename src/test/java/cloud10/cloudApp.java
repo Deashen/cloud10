@@ -37,6 +37,7 @@ public class cloudApp
             loginClass loginObj = new loginClass();
             User userObj = new User();
             loginObj.loginUserTest(this.driver, userObj);
+            Thread.sleep(7000);
         }
 
         @Test
@@ -47,7 +48,24 @@ public class cloudApp
             objBooking.makeBooking(this.driver);
         }
 
-        @After
+        @Test
+        public void updateBookings ()throws InterruptedException
+        {
+            this.loginUserTest();
+            UpdateBooking obj = new UpdateBooking(driver);
+            obj.updateBookings("209");
+
+            Thread.sleep(7000);
+        }
+    @Test
+    public void deleteBooking() throws InterruptedException{
+        this.loginUserTest();
+        DeleteBooking obj = new DeleteBooking(driver);
+        obj.deleteBookings("158");
+        Thread.sleep(7000);
+    }
+
+    @After
         public void tearDownTest()
         {
             this.driver.quit();

@@ -51,7 +51,7 @@ public class User
     {
         firstName = "Deashen";
         lastName = "Reddy";
-        email = "test1@deash1.com";
-        password = "xxxx";
+        email = "wsi@netactive.co.za";
+        password = "xxx";
     }
 }
